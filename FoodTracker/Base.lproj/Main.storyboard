@@ -109,11 +109,15 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="2cd-wZ-Gpp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="PLa-zw-2wB"/>
                             <constraint firstItem="2cd-wZ-Gpp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mQH-OP-7hP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2cd-wZ-Gpp" secondAttribute="trailing" id="qNK-LH-6vC"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Z4z-aB-Z8W" appends="YES" id="CMg-qk-zfD"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="lPO-Rb-aqa">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vGh-iY-UPb">
@@ -141,6 +145,11 @@
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="OAW-KQ-TMo"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Z4z-aB-Z8W">
+                    <connections>
+                        <action selector="rightSwipe:" destination="BYZ-38-t0r" id="2K2-0w-tmh"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2018.4000000000001" y="137.18140929535232"/>
         </scene>
@@ -185,6 +194,6 @@
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OYG-Wr-wrS"/>
+        <segue reference="bye-1r-UsD"/>
     </inferredMetricsTieBreakers>
 </document>
